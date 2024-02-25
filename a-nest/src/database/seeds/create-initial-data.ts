@@ -6,7 +6,7 @@ import {Channels} from "../../entities/Channels";
 export default class UserSeeder implements Seeder {
     public async run(
         dataSource: DataSource,
-        factoryManager: SeederFactoryManager
+        factoryManager: SeederFactoryManager //가짜 데이터 만들기 가짜 유저 등등
     ): Promise<any> {
         const workspacesRepository = dataSource.getRepository(Workspaces);
         await workspacesRepository.insert([{
