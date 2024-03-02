@@ -47,7 +47,12 @@ import {Workspaces} from "./entities/Workspaces";
       logging: true,
       charset: 'utf8mb4_general_ci',
     }),
-    TypeOrmModule.forFeature([Users]),
+    TypeOrmModule.forFeature([
+      Users,
+      Workspaces,
+      WorkspaceMembers,
+      ChannelMembers,
+    ]),
   ],
   controllers: [AppController],
   providers: [AppService, UsersService],
